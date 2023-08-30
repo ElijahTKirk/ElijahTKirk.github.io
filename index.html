@@ -55,36 +55,20 @@
     text-align: center;
     align-items: center;
 }
-        .animated-text-container {
-            text-align: center;
-            padding: 100px;
-        }
-
-        /* Animated text styles */
-        .animated-text {
-            font-size: 36px;
-            font-weight: bold;
-            color: #333;
-            position: relative;
+                .hover-button {
             display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
         }
 
-        /* Animation keyframes */
-        @keyframes slide {
-            0% {
-                transform: translateX(-100%);
-            }
-            100% {
-                transform: translateX(0);
-            }
-        }
-
-        /* Apply animation */
-        .animated-text span {
-            display: inline-block;
-            transform-origin: left;
-            animation: slide 1.5s forwards;
-            animation-delay: calc(0.1s * var(--index));
+        /* Animation on hover */
+        .hover-button:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -111,30 +95,7 @@
         <button class="green-button">CashApp</button>
     </a>
     </div>
-        <div class="animated-text-container">
-        <h1 class="animated-text">
-            <span style="--index: 1;">W</span>
-            <span style="--index: 2;">e</span>
-            <span style="--index: 3;">l</span>
-            <span style="--index: 4;">c</span>
-            <span style="--index: 5;">o</span>
-            <span style="--index: 6;">m</span>
-            <span style="--index: 7;">e</span>
-            <span style="--index: 8;"> </span>
-            <span style="--index: 9;">t</span>
-            <span style="--index: 10;">o</span>
-            <span style="--index: 11;"> </span>
-            <span style="--index: 12;">M</span>
-            <span style="--index: 13;">y</span>
-            <span style="--index: 14;"> </span>
-            <span style="--index: 15;">W</span>
-            <span style="--index: 16;">e</span>
-            <span style="--index: 17;">b</span>
-            <span style="--index: 18;">s</span>
-            <span style="--index: 19;">i</span>
-            <span style="--index: 20;">t</span>
-            <span style="--index: 21;">e</span>
-        </h1>
+    
         
         
         <div class="container">
