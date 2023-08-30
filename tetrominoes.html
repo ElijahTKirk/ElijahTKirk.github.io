@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Tetris-like Game</title>
+    <style>
+        /* ... CSS styles ... */
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <!-- The Tetris-like game will appear here -->
+    </div>
 
+    <script>
+        const gameContainer = document.querySelector(".game-container");
+
+        function createBlock() {
+            const block = document.createElement("div");
+            block.classList.add("block", "active");
+            return block;
+        }
+
+        function moveBlockDown(block) {
+            let row = parseInt(block.style.gridRow || 1);
+            row++;
+            block.style.gridRow = row;
+
+            if (row > 20) {
+                gameContainer.removeChild(block);
+            }
+        }
+
+        function startGame() {
+            setInterval(() => {
+                const block = createBlock();
+                const col = Math.floor(Math.random() * 10) + 1;
+                block.style.gridColumn = col;
+
+                gameContainer.appendChild(block);
+                moveBlockDown(block);
+            }, 1000);
+        }
+
+        startGame();
+    </script>
+</body>
+</html>
