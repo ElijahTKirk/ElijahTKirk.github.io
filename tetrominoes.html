@@ -3,21 +3,7 @@
 <head>
     <title>Simple Tetrominoes Game</title>
     <style>
-        .game-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-}
-
-.play-area {
-    width: 300px;
-    height: 600px;
-    border: 2px solid #000;
-    position: relative;
-    background-color: #fff;
-}
+        <style> .game-container { display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f0f0; } .play-area { width: 300px; height: 600px; border: 2px solid #000; position: relative; background-color: #fff; } </style>
     </style>
 </head>
 <body>
@@ -26,26 +12,70 @@
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-    const playArea = document.querySelector(".play-area");
+            const playArea = document.querySelector(".play-area");
 
-    const tetromino = document.createElement("div");
-    tetromino.classList.add("tetromino");
-    playArea.appendChild(tetromino);
+            let currentPosition = 0;
+            let currentRotation = 0;
+            const tetrominoShapes = [
+                // Define tetromino shapes as arrays of 0s and 1s
+                [[1, 1, 1, 1]], // I shape
+                [[1, 1], [1, 1]], // O shape
+                [[0, 1, 0], [1, 1, 1]], // T shape
+                // ... other shapes
+            ];
 
-    let currentPosition = 0;
+            let currentTetromino = tetrominoShapes[0];
 
-    function moveTetromino() {
-        currentPosition += 30;
-        tetromino.style.top = currentPosition + "px";
-    }
+            function drawTetromino() {
+                playArea.innerHTML = "";
+                currentTetromino.forEach((row, rowIndex) => {
+                    row.forEach((cell, cellIndex) => {
+                        if (cell) {
+                            const block = document.createElement("div");
+                            block.classList.add("tetromino");
+                            block.style.top = (currentPosition + rowIndex * 30) + "px";
+                            block.style.left = (cellIndex * 30) + "px";
+                            playArea.appendChild(block);
+                        }
+                    });
+                });
+            }
 
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "ArrowRight") {
-            moveTetromino();
-        }
-    });
-});
+            function moveTetromino() {
+                currentPosition += 30;
+                if (checkCollision()) {
+                    currentPosition -= 30;
+                }
+                drawTetromino();
+            }
 
+            function rotateTetromino() {
+                currentRotation = (currentRotation + 1) % 4;
+                const nextRotation = (currentRotation + 1) % 4;
+                const nextTetromino = tetrominoShapes[nextRotation];
+
+                if (!checkCollision(nextTetromino)) {
+                    currentTetromino = nextTetromino;
+                }
+
+                drawTetromino();
+            }
+
+            function checkCollision(nextTetromino) {
+                // ... collision detection logic ...
+                return false;
+            }
+
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "ArrowRight") {
+                    moveTetromino();
+                } else if (event.key === "ArrowUp") {
+                    rotateTetromino();
+                }
+            });
+
+            drawTetromino();
+        });
     </script>
 </body>
 </html>
