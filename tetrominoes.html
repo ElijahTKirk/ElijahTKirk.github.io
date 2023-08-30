@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Basic Tetris-like Game</title>
+    <title>Simple Tetrominoes Game</title>
     <style>
-        /* ... CSS styles ... */
+        .game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.play-area {
+    width: 300px;
+    height: 600px;
+    border: 2px solid #000;
+    position: relative;
+    background-color: #fff;
+}
     </style>
 </head>
 <body>
     <div class="game-container">
-        <!-- The Tetris-like game will appear here -->
+        <div class="play-area"></div>
     </div>
-
     <script>
-        const gameContainer = document.querySelector(".game-container");
+        document.addEventListener("DOMContentLoaded", () => {
+    const playArea = document.querySelector(".play-area");
 
-        function createBlock() {
-            const block = document.createElement("div");
-            block.classList.add("block", "active");
-            return block;
+    const tetromino = document.createElement("div");
+    tetromino.classList.add("tetromino");
+    playArea.appendChild(tetromino);
+
+    let currentPosition = 0;
+
+    function moveTetromino() {
+        currentPosition += 30;
+        tetromino.style.top = currentPosition + "px";
+    }
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowRight") {
+            moveTetromino();
         }
+    });
+});
 
-        function moveBlockDown(block) {
-            let row = parseInt(block.style.gridRow || 1);
-            row++;
-            block.style.gridRow = row;
-
-            if (row > 20) {
-                gameContainer.removeChild(block);
-            }
-        }
-
-        function startGame() {
-            setInterval(() => {
-                const block = createBlock();
-                const col = Math.floor(Math.random() * 10) + 1;
-                block.style.gridColumn = col;
-
-                gameContainer.appendChild(block);
-                moveBlockDown(block);
-            }, 1000);
-        }
-
-        startGame();
     </script>
 </body>
 </html>
