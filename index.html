@@ -55,22 +55,34 @@
     text-align: center;
     align-items: center;
 }
-                .hover-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-        }
-
-        /* Animation on hover */
-        .hover-button:hover {
-            transform: scale(1.1);
-        }
+        .animated-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: pulse 2s ease-in-out infinite;
+    text-decoration: none;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
     </style>
+
+
+    
 </head>
 <body>
     <header>
@@ -86,13 +98,14 @@
         <p>Or you can reach me via phone: (812)-690-1753</p>
     </div>
 
+    
 
-    <div class="container">
-<div class="button-container">
-        <li><a href="https://elijahtkirk.github.io/ecommerce" class="hover-button">ECOMMERCE</a></li>
-        <li><a href="https://elijahtkirk.github.io/editing" class="hover-button">VIDEO EDITING</a></li>
-        <li><a href="https://elijahtkirk.github.io/webdesign" class="hover-button">WEBPAGE DESIGN</a></li>
-    </div>
+ <a href="https://elijahtkirk.github.io/ecommerce.html" class="animated-button">Ecommerce</a>
+ <a href="https://elijahtkirk.github.io/editing.html" class="animated-button">Video Editing</a>
+ <a href="https://elijahtkirk.github.io/webdesign.html" class="animated-button">Webpage Design</a>
+
+
+    
 <p>Click the button below to pay for my Ecommerce, video editing, and webpage design services via Cash App:</p>
     
     <!-- Replace 'YOUR_CASH_APP_USERNAME' with your actual Cash App username -->
