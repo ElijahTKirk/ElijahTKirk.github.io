@@ -25,32 +25,28 @@ C<!DOCTYPE html>
             padding: 10px;
             text-align: center;
         }
-  .animate-text {
-    font-size: 24px;
+      .fade-in-text {
+    font-size: 32px;
     font-weight: bold;
-    color: blue;
-    animation: slide 2s linear infinite;
+    opacity: 0;
+    animation: fadeIn 2.5s ease-in-out forwards;
   }
-  
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
+
+  @keyframes fadeIn {
+    from {
       opacity: 0;
+      transform: translateY(20px);
     }
-    50% {
-      transform: translateX(100px);
+    to {
       opacity: 1;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 0;
+      transform: translateY(0);
     }
   }
     </style>
 </head>
 <body>
     <header>
-      <div class="animate-text">
+      <div class="fade-in-text">
         <h1>Ecommerce</h1>
       </div>
         <p>Ecommerce from Elijah Kirk.</p>
