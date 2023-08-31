@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <style>
+            body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+          text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+    }
 
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+      .fade-in-text {
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+  <div class="container">
+<p class="fade-in-text">Some of my work:</p>
+  </div>
+<div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fq2yUrLYbU0&t=3s&ab" frameborder="0" allowfullscreen></iframe>
+</div>
+</html>
