@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+<head>
     <title>Kirkhub: Editing</title>
-  <style>
-            body {
-             font-family: 'Dosis', sans-serif;
+    <style>
+        body {
+            font-family: 'Dosis', sans-serif;
+            margin: 0; /* Added to remove default margin */
         }
         header {
             background-color: #333;
@@ -15,7 +17,7 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-          text-align: center;
+            text-align: center;
         }
         footer {
             background-color: #333;
@@ -23,108 +25,94 @@
             padding: 10px;
             text-align: center;
         }
-    .video-container {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
-        height: 0;
-        overflow: hidden;
-    }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .fade-in-text {
+            color: #48f22d; /* Fixed color value format */
+            font-size: 32px;
+            font-weight: bold;
+            opacity: 0;
+            animation: fadeIn 2.5s ease-in-out forwards;
+            text-align: center;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animated-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 24px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .animated-button:hover {
+            background-color: #2980b9;
+        }
+        .video {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
 
-    .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-      .fade-in-text {
-    color: 48f22d;
-    font-size: 32px;
-    font-weight: bold;
-    opacity: 0;
-    animation: fadeIn 2.5s ease-in-out forwards;
-    text-align: center;
-    align-items: center;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-            .animated-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 24px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .animated-button:hover {
-    background-color: #2980b9;
-  }
-  .video{
-  text-align: center;
-  }
-</style>
-
-
-  
+    <header>
         <div class="fade-in-text">
-        <h1>Video Editing</h1>
-        <p>Video Editing from Elijah Kirk.</p>
+            <h1>Video Editing</h1>
+            <p>Video Editing from Elijah Kirk.</p>
         </div>
     </header>
 
-
-    
     <div class="container">
         <h2>About Me</h2>
         <h3>I sell my services on the web, creating products and developing my skills</h3>
     </div>
 
-
-
-  <div class="container">
-    <h2>Pricing</h2>
-<p>1.49/minute: A customized video up to 10 minutes. After 10 minutes it's 0.75/minute. Product delivered within 5 days</p>
-<p>2.99/minute: A customised video up to 8 minutes and a thumbnail. After 8 minutes it's 1.00/minute. Product delivered in 3 days or less</p>
-<p>4.99/minute: A customised video up to 5 minutes, a thumbnail, and captions. After 5 minutes it's 1.50/minute. Product delivered in less than 2 days</p>
-<h2>Half of the total price is paid up front, and half is only paid after you recieve your full video along with anything else you ordered</h2>
-
-
-      
-  <div class="container">
-<p class="fade-in-text">Some of my work:</p>
-  </div>
-      
-      
-      
-      <div class="container">
-          <a href="https://www.youtube.com/@tythebjorn" class="animated-button">Youtube Channel</a>
-      </div>
-
-
-          <div class="video">
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/fq2yUrLYbU0" title="We Cooked..." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-
-    
     <div class="container">
- <a href="https://elijahtkirk.github.io/index.html" class="animated-button">Home</a>
+        <h2>Pricing</h2>
+        <p>1.49/minute: A customized video up to 10 minutes. After 10 minutes it's 0.75/minute. Product delivered within 5 days</p>
+        <p>2.99/minute: A customized video up to 8 minutes and a thumbnail. After 8 minutes it's 1.00/minute. Product delivered in 3 days or less</p>
+        <p>4.99/minute: A customized video up to 5 minutes, a thumbnail, and captions. After 5 minutes it's 1.50/minute. Product delivered in less than 2 days</p>
+        <h2>Half of the total price is paid up front, and half is only paid after you receive your full video along with anything else you ordered</h2>
     </div>
-      
 
-    
+    <div class="container">
+        <p class="fade-in-text">Some of my work:</p>
+    </div>
+
+    <div class="container">
+        <a href="https://www.youtube.com/@tythebjorn" class="animated-button">Youtube Channel</a>
+    </div>
+
+    <div class="video">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/fq2yUrLYbU0" title="We Cooked..." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <div class="container">
+        <a href="https://elijahtkirk.github.io/index.html" class="animated-button">Home</a>
+    </div>
+
+</body>
 </html>
