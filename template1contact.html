@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirk & Co Web Design - Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Kirk & Co Web Design">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="template1.html">Home</a></li>
+                <li><a href="template1services.html">Services</a></li>
+                <li><a href="template1contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact">
+            <h1>Contact Us</h1>
+            <p>If you have any questions or would like to discuss a project, please reach out to us:</p>
+            <form action="mailto:kirkaffiliate@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit" class="button">Send Message</button>
+            </form>
+            <p>Or you can reach us directly via email at <a href="mailto:kirkaffiliate@gmail.com">kirkaffiliate@gmail.com</a> or call us at (812)-690-1753.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Kirk & Co Web Design. All rights reserved.</p>
+    </footer>
+</body>
+</html>
