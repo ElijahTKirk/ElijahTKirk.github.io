@@ -1,137 +1,128 @@
 <!DOCTYPE html>
-<html>
-<title>Kirk & Co Web Design</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirk & Co Web Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        /* Add your CSS styles here */
         body {
-            background-color: #409fdb; /* Set background color to #409fdb */
-            font-family: 'Roberto Condensed', sans-serif;
-            background-size: cover; /* Cover the entire viewport */
-            background-position: center; /* Center the background image */
+            background-color: #f0f4f8;
+            font-family: 'Roboto Condensed', sans-serif;
             margin: 0;
             padding: 0;
-            height: 100%;
         }
         header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px 0;
             text-align: center;
-            font-family: 'Roberto Condensed', sans-serif;
         }
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
-          text-align: center;
-            font-family: 'Roberto Condensed', sans-serif;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .sale {
-            max-width: 800px;
-            color: #FF0000;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-            font-family: 'Roberto Condensed', sans-serif;
+            color: #e74c3c;
+            margin: 20px 0;
+            font-weight: bold;
         }
         footer {
             background-color: #333;
             color: #fff;
-            padding: 10px;
+            padding: 10px 0;
             text-align: center;
-            font-family: 'Roberto Condensed', sans-serif;
         }
-      .fade-in-text {
-    font-size: 32px;
-    font-weight: bold;
-    opacity: 0;
-    animation: fadeIn 2.5s ease-in-out forwards;
-          font-family: 'Roberto Condensed', sans-serif;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-                .animated-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 24px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-                    font-family: 'Roberto Condensed', sans-serif;
-  }
-
-  .animated-button:hover {
-    background-color: #2980b9;
-  }
+        .fade-in-text {
+            font-size: 32px;
+            font-weight: bold;
+            opacity: 0;
+            animation: fadeIn 2.5s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animated-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .animated-button:hover {
+            background-color: #2980b9;
+        }
+        h1, h2, h3, h4 {
+            margin: 20px 0;
+            color: #333;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
         .white-box {
-  background-color: white; /* White box background color */
-  position: absolute;
-  top: 25%; /* Center the white box vertically */
-  left: 25%; /* Center the white box horizontally */
-  width: 80%; /* Adjust width as needed */
-  max-width: 850px; /* Maximum width of the white box */
-  padding: 15px; /* Add padding inside the white box */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
-}
+            background-color: white;
+            position: relative;
+            margin: 40px auto;
+            padding: 30px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .pricing, .maintenance, .contact {
+            margin-bottom: 40px;
+        }
     </style>
 </head>
 <body>
     <header>
-      <div class="fade-in-text">
-        <h1>Web Design</h1>
-  </div>
-        
-    <div class="white-box">
-          <div class="container">
-    <h1>Pricing</h1>
-              
-    <div class="container">
-  <p>149.99: A full customized 6 page website delivered in 10 days</p>
-  <p>199.99: A fully polished and customized 9 page website in within 1 week</p>
-  <p>249.99: A fully polished, optimized, and customized 12 page website in less than a week</p>
-  </div>  
-
-    <div class="container">
-        <h1>Web Maintenance</h1>
-    </div>
-
-    <div class="container">
-        <p>14.99/month: Custom domain with regular maintenance and small changes with no extra fee (pricing changes, etc.)</p>
-        <p>24.99/month: Custom domain, regular maintenance, and moderate reformatting changes with no extra fee (pricing changes, page rearrangement)</p>
-        <p>34.55/month: Custom domain, frequent maintenance, heavy reformatting changes, and new pages for no extra charge (New products, sales, events, etc.)</p>
-
-        <div class="container">
-            <h3>If ordered, our team will create a demo for your business and present it to you via e-mail or agreed upon conference date. You are only charged after buying the product after seeing that demo.</h2>
-            <h4>All online payments are made via CashApp. Physical payments can be made via cash or check.</h3>
+        <div class="fade-in-text">
+            <h1>Kirk & Co Web Design</h1>
         </div>
-    
-    <div class="container">
-        <h3>Contact Me</h2>
-        <p>If you have any questions e-mail me at: <a href="mailto:kirkaffiliate@gmail.com">kirkaffiliate@gmail.com</a></p>
-        <p>Or call me at 812-690-1753</p>
+    </header>
+    <div class="white-box">
+        <div class="container pricing">
+            <h1>Pricing</h1>
+            <p><strong>$149.99:</strong> A fully customized 6-page website delivered in 10 days</p>
+            <p><strong>$199.99:</strong> A fully polished and customized 9-page website delivered within 1 week</p>
+            <p><strong>$249.99:</strong> A fully polished, optimized, and customized 12-page website delivered in less than a week</p>
+        </div>
+        <div class="container maintenance">
+            <h1>Web Maintenance</h1>
+            <p><strong>$14.99/month:</strong> Custom domain with regular maintenance and small changes at no extra fee (pricing changes, etc.)</p>
+            <p><strong>$24.99/month:</strong> Custom domain, regular maintenance, and moderate reformatting changes at no extra fee (pricing changes, page rearrangement)</p>
+            <p><strong>$34.55/month:</strong> Custom domain, frequent maintenance, heavy reformatting changes, and new pages at no extra charge (new products, sales, events, etc.)</p>
+        </div>
+        <div class="container contact">
+            <h1>Contact Us</h1>
+            <p>If you have any questions, email us at: <a href="mailto:kirkaffiliate@gmail.com">kirkaffiliate@gmail.com</a></p>
+            <p>Or call us at: 812-690-1753</p>
+            <p><strong>Note:</strong> If ordered, our team will create a demo for your business and present it to you via email or an agreed-upon conference date. You are only charged after buying the product upon seeing the demo.</p>
+            <p>All online payments are made via CashApp. Physical payments can be made via cash or check.</p>
+        </div>
+        <div class="container">
+            <a href="https://elijahtkirk.github.io/index.html" class="animated-button">Home</a>
+        </div>
     </div>
-
-<div class="container">
- <a href="https://elijahtkirk.github.io/index.html" class="animated-button">Home</a>
-</div>
-    </div>
-    
     <footer>
-        <p>&copy; 2023 Kirk Affiliate. All rights reserved.</p>
+        <p>&copy; 2023 Kirk & Co Web Design. All rights reserved.</p>
     </footer>
 </body>
 </html>
