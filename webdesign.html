@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kirk & Co Web Design</title>
+    <title>Kirk & Co Web Design - Pricing</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -11,6 +11,7 @@
             font-family: 'Roboto Condensed', sans-serif;
             margin: 0;
             padding: 0;
+            color: #333;
         }
         header {
             background-color: #3498db;
@@ -19,17 +20,53 @@
             text-align: center;
         }
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .sale {
+        .pricing-plans {
+            display: flex;
+            justify-content: space-between;
+        }
+        .pricing-plan {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: center;
+        }
+        .pricing-plan h2 {
+            color: #3498db;
+        }
+        .pricing-plan p {
+            color: #555;
+        }
+        .pricing-plan .price {
+            font-size: 24px;
             color: #e74c3c;
             margin: 20px 0;
-            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #2980b9;
         }
         footer {
             background-color: #333;
@@ -53,42 +90,6 @@
                 transform: translateY(0);
             }
         }
-        .animated-button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: #3498db;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            text-align: center;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-        .animated-button:hover {
-            background-color: #2980b9;
-        }
-        h1, h2, h3, h4 {
-            margin: 20px 0;
-            color: #333;
-        }
-        p {
-            color: #555;
-            line-height: 1.6;
-        }
-        .white-box {
-            background-color: white;
-            position: relative;
-            margin: 40px auto;
-            padding: 30px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        .pricing, .maintenance, .contact {
-            margin-bottom: 40px;
-        }
     </style>
 </head>
 <body>
@@ -97,32 +98,37 @@
             <h1>Kirk & Co Web Design</h1>
         </div>
     </header>
-    <div class="white-box">
-        <div class="container pricing">
-            <h1>Pricing</h1>
-            <p><strong>$199.99:</strong> A fully customized 6-page website delivered in 10 days</p>
-            <p><strong>$299.99:</strong> A fully polished and customized 9-page website delivered within 1 week</p>
-            <p><strong>$399.99:</strong> A fully polished, optimized, and customized website up to 12-pages delivered in less than a week</p>
-        </div>
-        <div class="container maintenance">
-            <h1>Web Maintenance</h1>
-            <p><strong>$19.99/month:</strong> Custom domain with monthly maintenance and small changes at no extra fee (pricing changes, etc.)</p>
-            <p><strong>$29.99/month:</strong> Custom domain, bi-weekly maintenance, and moderate reformatting changes at no extra fee (pricing changes, page rearrangement)</p>
-            <p><strong>$39.99/month:</strong> Custom domain, weekly maintenance, heavy reformatting changes, and new pages at no extra charge (new products, sales, events, etc.)</p>
-        </div>
-        <div class="container contact">
-            <h1>Contact Us</h1>
-            <p>If you have any questions, email us at: <a href="mailto:kirkaffiliate@gmail.com">kirkaffiliate@gmail.com</a></p>
-            <p>Or call us at: 812-690-1753</p>
-            <p><strong>Note:</strong> If ordered, our team will create a demo for your business and present it to you via email or an agreed-upon conference date. You are only charged after buying the product upon seeing the demo.</p>
-            <p>All online payments are made via CashApp. Physical payments can be made via cash or check.</p>
-        </div>
-        <div class="container">
-            <a href="https://elijahtkirk.github.io/index.html" class="animated-button">Home</a>
+    <div class="container">
+        <h1>Pricing Plans</h1>
+        <div class="pricing-plans">
+            <div class="pricing-plan">
+                <h2>Mini</h2>
+                <p>Perfect for small projects</p>
+                <div class="price">$199.99</div>
+                <p>6-page customized website</p>
+                <p>Delivered in 10 days</p>
+                <a href="#" class="button">Choose Plan</a>
+            </div>
+            <div class="pricing-plan">
+                <h2>Basic</h2>
+                <p>Ideal for growing businesses</p>
+                <div class="price">$299.99</div>
+                <p>9-page customized website</p>
+                <p>Delivered in 1 week</p>
+                <a href="#" class="button">Choose Plan</a>
+            </div>
+            <div class="pricing-plan">
+                <h2>Advanced</h2>
+                <p>Best for large projects</p>
+                <div class="price">$399.99</div>
+                <p>12-page optimized website</p>
+                <p>Delivered in less than a week</p>
+                <a href="#" class="button">Choose Plan</a>
+            </div>
         </div>
     </div>
     <footer>
-        <p>&copy; 2023 Kirk & Co Web Design. All rights reserved.</p>
+        <p>&copy; 2024 Kirk & Co Web Design. All rights reserved.</p>
     </footer>
 </body>
 </html>
