@@ -1,171 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Kirk Ecommerce</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirk Ecommerce</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        /* Add your CSS styles here */
         body {
-    font-family: 'Dosis', sans-serif;
+            font-family: 'Dosis', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
         }
         header {
-            background-color: 409fdb;
-            font-size: 32px;
+            background-color: #409fdb;
             color: #fff;
-            padding: 10px;
+            padding: 20px 0;
             text-align: center;
-            font-family: 'Dosis', sans-serif;
         }
         .container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            font-family: 'Dosis', sans-serif;
         }
         footer {
             background-color: #333;
             color: #fff;
-            padding: 10px;
+            padding: 10px 0;
             text-align: center;
+        }
+        .green-button, .blue-button, .red-button, .animated-button {
             font-family: 'Dosis', sans-serif;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
         .green-button {
-    background-color: green;
-    color: white;
-    font-family: 'Dosis', sans-serif;
-    font-size: 24px;
-    border: none;
-    padding: 20px 40px;
-    cursor: pointer;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    align-items: center;
-}
-
-.green-button:hover {
-    background-color: darkgreen;
-     transform: scale(1.1);
-}
-                .blue-button {
-    background-color: 409fdb;
-    color: 48f22d;
-    font-family: 'Dosis', sans-serif;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    align-items: center;
-}
-    .red-button {
-    background-color: #ff0000;
-    color: #ffffff;
-    font-family: 'Dosis', sans-serif;
-    font-size: 24px;
-    border: none;
-    padding: 15px 30px;
-    cursor: pointer;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-}
-.red-button:hover {
-    background-color: #8b0000;
-}
+            background-color: green;
+            color: white;
+        }
+        .green-button:hover {
+            background-color: darkgreen;
+            transform: scale(1.1);
+        }
+        .blue-button {
+            background-color: #409fdb;
+            color: white;
+        }
+        .blue-button:hover {
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+        .red-button {
+            background-color: #ff0000;
+            color: white;
+        }
+        .red-button:hover {
+            background-color: #8b0000;
+            transform: scale(1.1);
+        }
         .animated-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 24px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    align-items: center;
-    font-family: 'Dosis', sans-serif;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .animated-button:hover {
-    background-color: #2980b9;
-       transform: scale(1.1);
-  }
-         .video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-  }
-
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-              .fade-in-text {
-    font-size: 32px;
-    font-weight: bold;
-    opacity: 0;
-    animation: fadeIn 2.5s ease-in-out forwards;
-    font-family: 'Dosis', sans-serif;
-  }
+            background-color: #3498db;
+            color: white;
+        }
+        .animated-button:hover {
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .fade-in-text {
+            font-size: 32px;
+            font-weight: bold;
+            opacity: 0;
+            animation: fadeIn 2.5s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
         .logo {
             display: block;
-            margin: 0 auto; /* Center-align the image horizontally */
-            width: 100px; /* Adjust the width as needed */
-            height: auto; /* Automatically adjust the height */
+            margin: 0 auto;
+            width: 100px;
+            height: auto;
         }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
     </style>
 </head>
 <body>
     <header>
-        
         <div class="fade-in-text">
-        <h1>Kirk & Co Web Design</h1>
+            <h1>Kirk & Co Web Design</h1>
         </div>
-        
         <div class="header">
-       <img src="KirkCo.png" alt="Centered Image">
+            <img src="KirkCo.png" alt="Kirk & Co Logo" class="logo">
         </div>
     </header>
-
     <div class="container">
- <a href="https://elijahtkirk.github.io/webdesign.html" class="animated-button">Plans & Pricing</a>
+        <a href="https://elijahtkirk.github.io/webdesign.html" class="animated-button">Plans & Pricing</a>
     </div>
-    
     <div class="container">
         <h2>Contact</h2>
         <p>You can reach me at <a href="mailto:kirkaffiliate@gmail.com">kirkaffiliate@gmail.com</a></p>
         <p>Or you can reach me via phone: (812)-690-1753</p>
     </div>
-</div>
-
     <footer>
-        <p>&copy; 2023 Kirk Affiliate. All rights reserved.</p>
+        <p>&copy; 2023 Kirk & Co Web Design. All rights reserved.</p>
     </footer>
 </body>
 </html>
