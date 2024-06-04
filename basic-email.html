@@ -80,11 +80,23 @@
     </header>
     <div class="container">
         <form action="mailto:kirkaffiliate@gmail.com" method="post" enctype="text/plain">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <button type="submit">Send</button>
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required>Hi, I am interested in the Basic Plan ($299.99): A fully customized 9-page website delivered in 2 weeks.</textarea>
+            </div>
+            <button type="submit" class="button">Send Email</button>
         </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Kirk & Co Web Design. All rights reserved.</p>
+    </footer>
+</body>
+</html>
