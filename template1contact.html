@@ -24,18 +24,15 @@
         <section class="contact">
             <h1>Contact Us</h1>
             <p>If you have any questions or would like to discuss a project, please reach out to us:</p>
-            <form action="mailto:kirkaffiliate@gmail.com" method="post" enctype="text/plain">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit" class="button">Send Message</button>
-            </form>
+        <form action="send_mail.php" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+        </form>
             <p>Or you can reach us directly via email at <a href="mailto:kirkaffiliate@gmail.com">kirkaffiliate@gmail.com</a> or call us at (812)-690-1753.</p>
         </section>
     </main>
