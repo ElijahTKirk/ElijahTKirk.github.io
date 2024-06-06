@@ -3,26 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vincennes Art Guild</title>
+    <title>Northwest Territory Art Guild</title>
     <style>
         body {
             font-family: "Times New Roman", Times, serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
+            background-image: url('path/to/your/background-image.jpg'); /* Add your background image path */
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #333;
         }
 
         header {
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.9);
             color: #fff;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
+            font-size: 24px;
         }
 
         nav {
             display: flex;
             justify-content: center;
-            background-color: #444;
+            background-color: rgba(68, 68, 68, 0.9);
+            border-bottom: 2px solid #fff;
         }
 
         nav a {
@@ -30,6 +37,7 @@
             padding: 14px 20px;
             text-decoration: none;
             text-align: center;
+            font-weight: bold;
         }
 
         nav a:hover {
@@ -39,13 +47,14 @@
         .container {
             padding: 20px;
             max-width: 1000px;
-            margin: 0 auto;
-            background-color: #fff;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
         }
 
         .content {
             padding: 20px;
-            background-color: #e8e8e8;
+            background-color: rgba(232, 232, 232, 0.9);
             border-radius: 10px;
         }
 
@@ -59,6 +68,9 @@
         .gallery-item {
             flex: 1 1 calc(33% - 10px);
             margin-bottom: 10px;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s;
         }
 
         .gallery-item img {
@@ -66,10 +78,19 @@
             height: auto;
             border: 1px solid #ccc;
             border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
         }
 
         footer {
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.9);
             color: #fff;
             text-align: center;
             padding: 10px 0;
@@ -82,7 +103,7 @@
 <body>
     <!-- Header -->
     <header>
-        <h1>[Gallery Name]</h1>
+        <h1>Northwest Territory Art Guild</h1>
     </header>
 
     <!-- Navigation Bar -->
@@ -97,17 +118,17 @@
     <!-- Home Page Content -->
     <div class="container" id="home">
         <div class="content">
-            <h2>Welcome to the Northwest Territory Art Guild</h2>
-            <p>At the Northwest Territory Art Guild, we celebrate the fusion of artistic expression and cultural heritage. Located in the heart of Vincennes, our gallery is a sanctuary for art enthusiasts, collectors, and creatives alike. We specialize in contemporary and classical artworks, showcasing a diverse range of pieces from both established and emerging artists.</p>
+            <h2>Welcome to Northwest Territory Art Guild</h2>
+            <p>At Northwest Territory Art Guild, we celebrate the fusion of artistic expression and cultural heritage. Located in the heart of Vincennes, our gallery is a sanctuary for art enthusiasts, collectors, and creatives alike. We specialize in contemporary and classical artworks, showcasing a diverse range of pieces from both established and emerging artists.</p>
             
             <h3>Our Mission</h3>
             <p>Our mission is to inspire and nurture a love for art in the community by providing a platform for artists to exhibit their work and for visitors to experience the transformative power of art. We aim to be a space where creativity thrives and where the stories behind each piece come to life.</p>
 
             <h3>What We Offer</h3>
-            <p>At the Northwest Territory Art Guild, you can explore a curated selection of paintings, sculptures, and mixed media works. We host regular exhibitions, artist talks, and workshops that offer a deeper insight into the art world. Whether you are looking to add to your collection or simply appreciate the beauty of art, the Northwest Territory Art Guild is the perfect destination.</p>
+            <p>At Northwest Territory Art Guild, you can explore a curated selection of paintings, sculptures, and mixed media works. We host regular exhibitions, artist talks, and workshops that offer a deeper insight into the art world. Whether you are looking to add to your collection or simply appreciate the beauty of art, Northwest Territory Art Guild is the perfect destination.</p>
 
             <h3>Visit Us</h3>
-            <p>We invite you to visit us at [Gallery Address]. Our doors are open [Gallery Hours]. For more information, please contact us at [Gallery Contact Information].</p>
+            <p>We invite you to visit us at 316 Main st, #B. Our doors are open Tuesday through Saturday from 11am-2pm. For more information, please contact us at (Need contact info).</p>
         </div>
     </div>
 
@@ -116,94 +137,94 @@
         <div class="content gallery-container">
             <!-- Repeat the following block for each artwork image -->
             <div class="gallery-item">
-                <img src="path/to/image1.jpg" alt="Artwork 1">
+                <a href="gallery.html"><img src="path/to/image1.jpg" alt="Artwork 1"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image2.jpg" alt="Artwork 2">
+                <a href="gallery.html"><img src="path/to/image2.jpg" alt="Artwork 2"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image3.jpg" alt="Artwork 3">
+                <a href="gallery.html"><img src="path/to/image3.jpg" alt="Artwork 3"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image4.jpg" alt="Artwork 4">
+                <a href="gallery.html"><img src="path/to/image4.jpg" alt="Artwork 4"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image5.jpg" alt="Artwork 5">
+                <a href="gallery.html"><img src="path/to/image5.jpg" alt="Artwork 5"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image6.jpg" alt="Artwork 6">
+                <a href="gallery.html"><img src="path/to/image6.jpg" alt="Artwork 6"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image7.jpg" alt="Artwork 7">
+                <a href="gallery.html"><img src="path/to/image7.jpg" alt="Artwork 7"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image8.jpg" alt="Artwork 8">
+                <a href="gallery.html"><img src="path/to/image8.jpg" alt="Artwork 8"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image9.jpg" alt="Artwork 9">
+                <a href="gallery.html"><img src="path/to/image9.jpg" alt="Artwork 9"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image10.jpg" alt="Artwork 10">
+                <a href="gallery.html"><img src="path/to/image10.jpg" alt="Artwork 10"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image11.jpg" alt="Artwork 11">
+                <a href="gallery.html"><img src="path/to/image11.jpg" alt="Artwork 11"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image12.jpg" alt="Artwork 12">
+                <a href="gallery.html"><img src="path/to/image12.jpg" alt="Artwork 12"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image13.jpg" alt="Artwork 13">
+                <a href="gallery.html"><img src="path/to/image13.jpg" alt="Artwork 13"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image14.jpg" alt="Artwork 14">
+                <a href="gallery.html"><img src="path/to/image14.jpg" alt="Artwork 14"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image15.jpg" alt="Artwork 15">
+                <a href="gallery.html"><img src="path/to/image15.jpg" alt="Artwork 15"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image16.jpg" alt="Artwork 16">
+                <a href="gallery.html"><img src="path/to/image16.jpg" alt="Artwork 16"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image17.jpg" alt="Artwork 17">
+                <a href="gallery.html"><img src="path/to/image17.jpg" alt="Artwork 17"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image18.jpg" alt="Artwork 18">
+                <a href="gallery.html"><img src="path/to/image18.jpg" alt="Artwork 18"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image19.jpg" alt="Artwork 19">
+                <a href="gallery.html"><img src="path/to/image19.jpg" alt="Artwork 19"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image20.jpg" alt="Artwork 20">
+                <a href="gallery.html"><img src="path/to/image20.jpg" alt="Artwork 20"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image21.jpg" alt="Artwork 21">
+                <a href="gallery.html"><img src="path/to/image21.jpg" alt="Artwork 21"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image22.jpg" alt="Artwork 22">
+                <a href="gallery.html"><img src="path/to/image22.jpg" alt="Artwork 22"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image23.jpg" alt="Artwork 23">
+                <a href="gallery.html"><img src="path/to/image23.jpg" alt="Artwork 23"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image24.jpg" alt="Artwork 24">
+                <a href="gallery.html"><img src="path/to/image24.jpg" alt="Artwork 24"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image25.jpg" alt="Artwork 25">
+                <a href="gallery.html"><img src="path/to/image25.jpg" alt="Artwork 25"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image26.jpg" alt="Artwork 26">
+                <a href="gallery.html"><img src="path/to/image26.jpg" alt="Artwork 26"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image27.jpg" alt="Artwork 27">
+                <a href="gallery.html"><img src="path/to/image27.jpg" alt="Artwork 27"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image28.jpg" alt="Artwork 28">
+                <a href="gallery.html"><img src="path/to/image28.jpg" alt="Artwork 28"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image29.jpg" alt="Artwork 29">
+                <a href="gallery.html"><img src="path/to/image29.jpg" alt="Artwork 29"></a>
             </div>
             <div class="gallery-item">
-                <img src="path/to/image30.jpg" alt="Artwork 30">
+                <a href="gallery.html"><img src="path/to/image30.jpg" alt="Artwork 30"></a>
             </div>
             <!-- End of image block -->
         </div>
