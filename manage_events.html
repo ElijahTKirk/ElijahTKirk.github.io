@@ -22,7 +22,6 @@
             padding: 20px 0;
             text-align: center;
             font-size: 24px;
-            position: relative;
         }
         nav {
             display: flex;
@@ -113,7 +112,24 @@
         }
 
         function editEvent(id) {
-            // Implement this function to open a modal or form for editing an event
+            const title = prompt("Enter new title:");
+            const date = prompt("Enter new date (YYYY-MM-DD):");
+            const description = prompt("Enter new description:");
+            
+            if (title && date && description) {
+                fetch('update_event.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: `id=${id}&title=${title}&date=${date}&description=${description}`
+                })
+                .then(response => response.text())
+                .then(result => {
+                    alert(result);
+                    fetchEvents();
+                });
+            }
         }
 
         function deleteEvent(id) {
@@ -142,12 +158,10 @@
 
     <!-- Navigation Bar -->
     <nav>
-        <a href="index.html">Home</a>
+        <a href="VincennesArtGuild.html">Home</a>
         <a href="gallery.html">Gallery</a>
         <a href="events.html">Events</a>
         <a href="manage_events.html">Manage Events</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
     </nav>
 
     <!-- Event Management Page Content -->
